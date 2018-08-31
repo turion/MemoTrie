@@ -12,7 +12,7 @@ Description:
   .
   &#169; 2008-2016 by Conal Elliott; BSD3 license.
 Homepage:            https://github.com/conal/MemoTrie
-Author:              Conal Elliott 
+Author:              Conal Elliott
 Maintainer:          conal@conal.net
 Copyright:           (c) 2008-2016 by Conal Elliott
 License:             BSD3
@@ -32,18 +32,15 @@ Flag examples
 Library
   hs-Source-Dirs:      src
 
-  if impl(ghc >= 7.10.0)
      Build-Depends: base >=4.8.0.0 && <5, newtype-generics >= 0.4
-  else
-     Build-Depends: base <4.8.0.0, void, newtype-generics >= 0.4
 
-  Exposed-Modules:     
+  Exposed-Modules:
                      Data.MemoTrie
-  Other-Modules:     
+  Other-Modules:
 
   default-language: Haskell2010
 
-executable generic 
+executable generic
   if !flag(examples)
     buildable:         False
   main-is:             Generic.hs
@@ -52,4 +49,3 @@ executable generic
   hs-source-dirs:      examples
   default-language:    Haskell2010
   build-depends:       base, MemoTrie
-
